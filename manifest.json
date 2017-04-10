@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Littlefield UI Annoyance Reduction",
+  "description": "This extension eliminates the popup-window nature of the Littlefield Factory Simulator.",
+  "version": "1.0",
+  "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://op.responsive.net/Littlefield/CheckAccess"
+      ],
+      "js" : ["contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "web_accessible_resources": ["script.js"]
+}
